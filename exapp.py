@@ -32,9 +32,9 @@ load_dotenv()
 DEFAULT_GREETING = 'AI 휴먼'
 APP_GREETING = os.getenv('APP_GREETING', DEFAULT_GREETING)
 
-def get_connection():
-    # 환경변수 기반 PostgreSQL Connection을 반환합니다.
-    return psycopg.connect(APP_GREETING)
+# def get_connection():
+#     # 환경변수 기반 PostgreSQL Connection을 반환합니다.
+#     return psycopg.connect(APP_GREETING)
 
 st.set_page_config(
     page_title='맛집 저장 앱',
