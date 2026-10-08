@@ -40,7 +40,7 @@ st.set_page_config(
 st.title('🐾 동물 사전 앱')
 st.write('사이드바에서 종류를 고르거나, 상단 검색창에서 원하는 동물을 직접 찾아보세요!')
 
-# 동물 데이터 정의 (종류당 5개씩, 이미지 URL 포함)
+# 동물 데이터 정의 (종류당 5개씩, 이미지 URL 수정)
 animal_data = {
     '육지': {
         '사자': {
@@ -62,14 +62,14 @@ animal_data = {
             '특징': '목이 매우 길어 높은 곳의 나뭇잎을 뜯어먹을 수 있습니다.',
             '서식지': '아프리카 사바나',
             '식성': '초식',
-            '이미지': 'https://images.unsplash.com/photo-1538451072051-744161f5f308?w=600'
+            '이미지': 'https://images.unsplash.com/photo-1547721064-da6cfb341d50?w=600'
         },
         '호랑이': {
             '영문명': 'Tiger',
             '특징': '주황색 바탕에 검은 줄무늬가 있으며 단독 생활을 합니다.',
             '서식지': '아시아 (시베리아, 인도 등)',
             '식성': '육식',
-            '이미지': 'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600'
+            '이미지': 'https://images.unsplash.com/photo-1561731216-c3a4d99437d5?w=600'
         },
         '판다': {
             '영문명': 'Panda',
@@ -85,7 +85,7 @@ animal_data = {
             '특징': '지능이 매우 높고 사회성이 뛰어난 해양 포유류입니다.',
             '서식지': '전 세계 바다',
             '식성': '육식 (물고기, 오징어 등)',
-            '이미지': 'https://images.unsplash.com/photo-1607153333873-c1f4efebdbd4?w=600'
+            '이미지': 'https://images.unsplash.com/photo-1570481662006-a1c6e73c0f4f?w=600'
         },
         '상어': {
             '영문명': 'Shark',
@@ -136,7 +136,7 @@ animal_data = {
             '특징': '야행성 조류이며 밤에도 소리 없이 비행할 수 있습니다.',
             '서식지': '전 세계 (숲, 초원)',
             '식성': '육식 (쥐, 곤충 등)',
-            '이미지': 'https://images.unsplash.com/photo-1522926193638-b57cdb1e7f80?w=600'
+            '이미지': 'https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=600'
         },
         '홍학 (플라밍고)': {
             '영문명': 'Flamingo',
@@ -175,7 +175,7 @@ with st.sidebar:
 st.write("---")
 
 
-# 공통 정보 출력 함수 정의 (설명이 먼저 나오고 사진이 맨 아래로 가도록 배치)
+# 공통 정보 출력 함수 정의 (설명이 먼저 나오고 사진이 맨 아래에 오도록 배치)
 def display_animal_info(category, name, info):
     st.subheader(f'📖 [{category}] {name} 정보')
 
