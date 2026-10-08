@@ -20,10 +20,8 @@
 
 import os
 import pandas as pd
-import psycopg
 import streamlit as st
 from dotenv import load_dotenv
-from psycopg.rows import dict_row
 
 
 # .env 파일의 환경변수를 로딩
