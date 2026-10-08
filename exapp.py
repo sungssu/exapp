@@ -40,7 +40,7 @@ st.set_page_config(
 st.title('🐾 동물 사전 앱')
 st.write('사이드바에서 종류를 고르거나, 상단 검색창에서 원하는 동물을 직접 찾아보세요!')
 
-# 동물 데이터 정의 (종류당 5개씩, 이미지 URL 추가)
+# 동물 데이터 정의 (종류당 5개씩, 이미지 URL 포함)
 animal_data = {
     '육지': {
         '사자': {
@@ -175,12 +175,9 @@ with st.sidebar:
 st.write("---")
 
 
-# 공통 정보 출력 함수 정의
+# 공통 정보 출력 함수 정의 (설명이 먼저 나오고 사진이 맨 아래로 가도록 배치)
 def display_animal_info(category, name, info):
     st.subheader(f'📖 [{category}] {name} 정보')
-
-    # 사진 출력 (st.image 활용)
-    st.image(info['이미지'], caption=f"{name} ({info['영문명']})", use_container_width=True)
 
     col1, col2 = st.columns(2)
     with col1:
@@ -192,6 +189,9 @@ def display_animal_info(category, name, info):
         st.success(f"**대표 특징**: {info['특징']}")
 
     st.write(f"💡 **상세 설명**: {name}은(는) {info['서식지']}에 주로 서식하며, {info['특징']} 특징을 가진 멋진 동물입니다.")
+
+    # 사진을 맨 밑에 배치 (width=400)
+    st.image(info['이미지'], caption=f"{name} ({info['영문명']})", width=400)
 
 
 # 2. 검색창에 입력이 들어온 경우 처리 (기록에 없는 동물 체크 포함)
